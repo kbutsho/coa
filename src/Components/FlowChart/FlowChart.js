@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar';
 const FlowChart = () => {
     return (
         <div>
-            <div style={{ height: "80vh" }}>
+            <div style={{ height: "85vh" }}>
                 <NavBar></NavBar>
                 <h1 className="text-center py-5">Flow chart Page</h1>
 

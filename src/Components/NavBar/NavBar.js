@@ -15,8 +15,9 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav fw-bold text-uppercase ms-auto">
                             <Link className="nav-link px-3 text-white" to="/">Home</Link>
-                            <Link className="nav-link px-3 text-white" to="/flowChart">Flow Chart</Link>
                             <Link className="nav-link px-3 text-white" to="/about">About Us</Link>
+                            <Link className="nav-link px-3 text-white" to="/flowChart">Flow Chart</Link>
+                           
                             <Link className="nav-link px-3 text-white" to="/assCode">Assembly Code</Link>
                             <Link className="nav-link px-3 text-white" to="/codeSection">Code Section</Link>
                             <Link className="nav-link px-3 text-white" to="/codeRun">Code Run</Link>
