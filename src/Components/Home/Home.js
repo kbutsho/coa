@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
 import QuestionAnsCard from './QuestionAnsCard';
 import Slider from './Slider';
-import './Home.css';
+import './Home.css'
 
 const Home = () => {
 
@@ -32,10 +32,10 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className="container">
             <Slider></Slider>
             <NavBar></NavBar>
-            <div className="containe">
+            <div className="container">
                 <div className="row">
 
                     {/* question answer area start */}

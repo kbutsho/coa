@@ -11,6 +11,7 @@ import CodeSection from './Components/CodeSection/CodeSection';
 import CodeRun from './Components/CodeRun/CodeRun';
 import Home from './Components/Home/Home';
 import AboutGroup from './Components/AboutGroup/AboutGroup';
+import './App.css';
 
 const App = () => {
   return (
