@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div className="mb-5">
-            <nav className="navbar navbar-expand-lg navbar-light bg-success fixed-top">
+        <div className="">
+            <nav className="navbar navbar-expand-lg navbar-light" style={{background: "darkblue"}}>
                 <div className="container-fluid container">
                     <h3 className="text-white customFont" style={{ letterSpacing: '2px' }}>
                         COA Project

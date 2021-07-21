@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <p className="text-dark text-center" style={{fontSize: "15px"}}>Copyright {(new Date()).getFullYear()} || All Rights Reserved  by <span style={{color: "red", fontWeight:"bold"}}>KB UTSHO</span></p>
+        <div className="bg-dark py-1 d-flex justify-content-center align-items-center">
+            <p className="text-white mt-2" style={{ fontSize: "16px" }}>Copyright © {(new Date()).getFullYear()} || All Rights Reserved</p>
         </div>
     );
 };
