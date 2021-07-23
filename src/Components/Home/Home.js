@@ -32,10 +32,10 @@ const Home = () => {
 
 
     return (
-        <div className="container">
+        <div className="">
             <Slider></Slider>
             <NavBar></NavBar>
-            <div className="container">
+            <div className="">
                 <div className="row">
 
                     {/* question answer area start */}

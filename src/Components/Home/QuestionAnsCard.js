@@ -11,9 +11,13 @@ const QuestionAnsCard = (props) => {
     };
     return (
         <div className="my-5">
-            <div className="d-flex">
-                <h4>{que}</h4>
-                <button onClick={toggleModal} className="btn btn-sm btn-warning font-weight-bold mx-3">Answer</button>
+            <div className="row">
+                <div className="col-md-9">
+                    <h4>{que}</h4>
+                </div>
+                <div className="col-md-3">
+                    <button onClick={toggleModal} className="btn btn-sm btn-warning font-weight-bold mx-3">Answer</button>
+                </div>
             </div>
             {modal ? (
                 <Modal isOpen={modal} onClick={toggleModal} style={{ marginTop: "70px" }}>
