@@ -32,10 +32,11 @@ const Home = () => {
 
 
     return (
-        <div className="">
+        <div>
             <Slider></Slider>
             <NavBar></NavBar>
-            <div className="">
+           
+            <div>
                 <div className="row">
 
                     {/* question answer area start */}
@@ -46,7 +47,6 @@ const Home = () => {
                     </div>
                     {/* question answer area end */}
                    
-
 
                     {/* header title area start */}
                     <div className="col-md-8 p-5 bg-danger text-white">

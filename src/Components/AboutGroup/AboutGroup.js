@@ -1,13 +1,20 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
+import './AboutGroup.css';
 
 const AboutGroup = () => {
     return (
         <div>
-            <div style={{ height: "85vh" }}>
+            <div>
                 <NavBar></NavBar>
-                <h1 className="text-center py-5">About Group Page</h1>
+                <div className="about-area">
+                </div>
+                <div>
+                    <div className="about-details bg-info" style={{height: "40vh"}}>
+
+                    </div>
+                </div>
 
             </div>
             <Footer></Footer>
