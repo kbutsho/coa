@@ -5,9 +5,9 @@ import NavBar from '../NavBar/NavBar';
 const AssCode = () => {
     return (
         <div>
-            <div >
+            <div className="bg-dark">
                 <NavBar></NavBar>
-                <h1 className="text-center py-5">Assembly code Page</h1>
+                <h1 className="text-center py-5 text-white">Assembly code</h1>
 
                 <div className="text-white " style={{ width: "60%", margin: "0 auto" }}>
 
