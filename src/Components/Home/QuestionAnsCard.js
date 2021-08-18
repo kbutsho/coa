@@ -23,7 +23,7 @@ const QuestionAnsCard = (props) => {
                 <Modal isOpen={modal} onClick={toggleModal} style={{ marginTop: "70px" }}>
                     <ModalBody>
                         <h4 className="my-3 font-weight-bold text-uppercase text-info text-center">{que}</h4>
-                        <p className="font-weight-bold text-danger text-uppercase">{ans}</p>
+                        <p className="px-3">{ans}</p>
                     </ModalBody>
                     <ModalFooter>
                         <div className="text-left">

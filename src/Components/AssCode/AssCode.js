@@ -5,15 +5,26 @@ import NavBar from '../NavBar/NavBar';
 const AssCode = () => {
     return (
         <div>
-            <div className="bg-dark">
+            <div className="">
                 <NavBar></NavBar>
-                <h1 className="text-center py-5 text-white">Assembly code</h1>
+                <h1 className="text-center py-5 text-white text-uppercase">Assembly Code</h1>
 
-                <div className="text-white " style={{ width: "60%", margin: "0 auto" }}>
+                <div className="text-white bg-dark p-5" style={{ width: "70%", margin: "0 auto", borderRadius: "15px" }}>
 
                     .MODEL LARGE <br />
                     .STACK 1000H  <br />
-                    .DATA  <br />
+                    .DATA  <br /> <br />
+                    start1 DB 10,13,'**** COMPUTER ORGANIZATION AND ARCHITECTURE(SECTION-A) ****$'  <br />
+                    start2 DB 10,13,'**** FACULTY: MD. NAZMUL HOSSAIN ****$' <br />
+                    start3 DB 10,13,'**** GROUP NUMBER:6 ****$' <br />
+                    start4 DB 10,13,'**** GROUP MEMBERS: ****$' <br />
+                    start5 DB 10,13,'**** MD. EMRUL HASAN EMON, 19-40357-1 ****$' <br />
+                    start6 DB 10,13,'**** AFIFA TAZREMIN OISHI, 19-40028-1 ****$' <br />
+                    start7 DB 10,13,'**** SM MUNTASIR RAHMAN,18-39197-3 ****$' <br />
+                    start8 DB 10,13,'**** RAYHAN RAHMAN, 17-35963-3 ****',10,13,'$' <br />
+                    MSG1 DB 10,13,10,13,'              **** WELCOME TO VEHICLE PLACING MANAGEMENT SYSTEM <br /> <br />****$'  <br />
+                    MSG2 DB 10,13,10,13,'  ENTER CHOICE :  $'  <br />
+                    MSG3 DB 10,13,10,13,'     WHAT TYPE OF VEHICLE SHOULD YOU PARKING(ENTER YOUR CHOSE)     $'  <br />
                     MSG1 DB 10,13,10,13,'              **** WELCOME TO VEHICLE PLACING MANAGEMENT SYSTEM ****$'  <br />
                     MSG2 DB 10,13,10,13,'  ENTER CHOICE :  $'  <br />
                     MSG3 DB 10,13,10,13,'     WHAT TYPE OF VEHICLE SHOULD YOU PARKING(ENTER YOUR CHOSE)     $'  <br />
@@ -26,7 +37,7 @@ const AssCode = () => {
                     C4 DB 10,13,'  **          4.PICKUP VAN ( SHIFTER )         **$'<br />
                     C5 DB 10,13,'  **          5.MICRO ( HIACE)                 **$'<br />
                     C6 DB 10,13,'  **          6.MICRO ( MINI)                  **$'<br />
-                  
+
 
                     MSG4 DB 10,13,10,13,'*** CHOISE YOUR PLACE FROM THE MENU ***$'   <br />
 
@@ -45,7 +56,7 @@ const AssCode = () => {
 
 
                     ;PICKUP VAN ( MEDIUM ) ITEM   <br />  <br />
- 
+
                     PICKM1 DB 10,13,'  **   1.HATIRJHEEL LAKE AREA (HOUSE NO 2D)                       60/-    **$'   <br />
                     PICKM2 DB 10,13,'  **   2.KAZIPARA (MIRPUR AREA)                                   80/-    **$'   <br />
                     PICKM3 DB 10,13,'  **   3.AGARGAON (SANSOD VOBON AREA)                             30/-    **$' <br />
@@ -111,7 +122,7 @@ const AssCode = () => {
 
                     ;INVALID <br /> <br />
                     MSG5 DB 10,13,10,13,'      ***   INVALID ENTRY   ***$' <br />
-                    MSG6 DB 10,13,'      ***   TRY AGAIN    ***$' <br /> 
+                    MSG6 DB 10,13,'      ***   TRY AGAIN    ***$' <br />
 
                     <br /> <br />
 
@@ -125,7 +136,7 @@ const AssCode = () => {
                     <br /><br />
                     MSG10 DB 10,13,10,13,'1.GO BACK TO MAIN MENU$'
                     MSG11 DB 10,13,'2.EXIT$'
-                    <br /><br /> 
+                    <br /><br />
 
 
 
@@ -147,11 +158,29 @@ const AssCode = () => {
 
 
                     .CODE <br />
+
                     MAIN PROC <br />
                     MOV AX,@DATA <br />
                     MOV DS,AX <br />
+                    MOV AH,9                 ;PRINT " COURSE,FACULTY,GROUPMEMBERS NAME "
+                    LEA DX,start1 <br />
+                    INT 21H <br />
+                    LEA DX,start2 <br />
+                    INT 21H <br />
+                    LEA DX,start3 <br />
+                    INT 21H <br />
+                    LEA DX,start4 <br />
+                    INT 21H <br />
+                    LEA DX,start5 <br />
+                    INT 21H <br />
+                    LEA DX,start6 <br />
+                    INT 21H <br />
+                    LEA DX,start7 <br />
+                    INT 21H <br />
+                    LEA DX,start8 <br />
+                    INT 21H <br />
 
-                    FIRST:<br /> 
+                    FIRST:<br />
 
                     LEA DX,MSG1             ;PRINT " WELCOME TO VEHICLE PLACING MANAGEMENT SYSTEM " <br />
                     MOV AH,9 <br />
@@ -275,7 +304,7 @@ const AssCode = () => {
                     LEA DX,BIKE4            ;BIKE PLACE 4 <br />
                     MOV AH,9 <br />
                     INT 21H <br />
- 
+
                     <br /><br />
                     LEA DX,BIKE5            ;BIKE PLACE 5 <br />
                     MOV AH,9 <br />
@@ -460,7 +489,7 @@ const AssCode = () => {
                     INT 21H  <br />
                     MOV DL,45  <br />
                     INT 21H <br />
- 
+
                     <br />  <br />
 
                     LEA DX,MSG10            ;PRINT "GO BACK TO MAIN MENU " <br />
@@ -474,7 +503,7 @@ const AssCode = () => {
                     LEA DX,MSG7             ;PRINT CHOSE OPTION  <br />
                     MOV AH,9  <br />
                     INT 21H  <br />
- 
+
                     MOV AH,1                ;MAIN MENU  <br />
                     INT 21H  <br />
                     SUB AL,48  <br />
@@ -2072,7 +2101,7 @@ const AssCode = () => {
                     INT 21H<br />
                     MAIN ENDP <br />
                     END MAIN <br />
-                </div> 
+                </div>
 
 
 
